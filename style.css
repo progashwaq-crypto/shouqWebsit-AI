@@ -1,0 +1,157 @@
+/* --- 1. الإعدادات العامة --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #0f172a; /* لون الخلفية الموحد والفخم */
+    color: #f8fafc;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- 2. شريط التنقل في المنتصف --- */
+header {
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 20px 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px; 
+}
+
+header nav ul li a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s, transform 0.3s;
+}
+
+header nav ul li a:hover, 
+header nav ul li a.active {
+    color: #38bdf8;
+    transform: translateY(-2px);
+}
+
+/* --- 3. القسم الرئيسي (Hero Section) --- */
+.hero {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    background: linear-gradient(to right, #38bdf8, #818cf8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #cbd5e1;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #38bdf8, #6366f1);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.5);
+}
+
+/* --- 4. الأقسام العامة والـ iframe --- */
+.content-area {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 75vh;
+    background: transparent !important;
+    border: none;
+    display: block;
+}
+
+.section {
+    width: 100%;
+    padding: 60px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section h2 {
+    font-size: 2.2rem;
+    color: #38bdf8;
+    margin-bottom: 20px;
+}
+
+.section p {
+    font-size: 1.15rem;
+    max-width: 800px;
+    color: #cbd5e1;
+    margin-bottom: 15px;
+}
+
+/* --- 5. التذييل (Footer) ثابت في الأسفل --- */
+footer {
+    width: 100%;
+    background-color: #090d16;
+    color: #64748b;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: auto;
+}
